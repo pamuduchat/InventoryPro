@@ -40,8 +40,8 @@ public class ProductService {
         return "Product deleted successfully";
     }
 
-    public ProductDTO getProductById(Integer productId) {
-        Product product = productRepository.getProductById(productId);
+    public ProductDTO getProductByProductId(Integer productId) {
+        Product product = productRepository.getProductByProductId(productId);
         return modelMapper.map(product, ProductDTO.class);
     }
 

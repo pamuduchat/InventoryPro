@@ -4,7 +4,6 @@ import com.java.inventory.dto.InventoryDTO;
 import com.java.inventory.service.InventoryService;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -24,7 +23,7 @@ public class InventoryController {
 
     @GetMapping("/items/{itemId}")
     public InventoryDTO getItemsById(@PathVariable Integer itemId) {
-        return inventoryService.getItemById(itemId);
+        return inventoryService.getItemByItemId(itemId);
     }
 
     @PostMapping("/items")
