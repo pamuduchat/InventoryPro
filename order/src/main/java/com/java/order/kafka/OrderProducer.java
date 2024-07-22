@@ -23,7 +23,7 @@ public class OrderProducer {
         this.kafkaTemplate = kafkaTemplate;
     }
 
-    public void sendMessage(OrderEventDTO orderEventDTO){
+    public void sendMessage(OrderEventDTO orderEventDTO) {
         LOGGER.info(String.format("Sending order event to topic %s", orderEventDTO.toString()));
 
         Message<OrderEventDTO> message = MessageBuilder.withPayload(orderEventDTO)
